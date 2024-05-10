@@ -30,10 +30,11 @@ app.get('/add/:name', (req, res) => {
         throw error;
       }
       const names = results.map(result => result.name).join('<br>');
-      res.send(`<h1>Full Cycle Rocks!</h1><p>Lista de nomes cadastrados:</p>${names}`);
+      res.send(`<h1>Full Cycle Rocks!</h1><p>Lista de nomes cadastrados: </p>${names}`);
     });
   });
 
 app.listen(port, ()=> {
     console.log('Rodando na porta' + port)
+    
 })
